@@ -20,6 +20,10 @@ const setupInput = function(conn) {
     if (key === 's') {
       conn.write('Move: down');
     }
+
+    if (key === 'q') {
+      conn.write('Say: Hello');
+    }
   };
   stdin.on('data', handleUserInput);
   return stdin;
